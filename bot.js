@@ -1,8 +1,14 @@
-const Discord = require("discord.js");
-const bot = new Discord.Client({disableEveryone: true}); // botnya tidak akan bisa mention @everyone
-const config = require("./config.json"); // kita akan menaruh prefix dan token disini
+const Discord - require{'discord.js'};
+const client - new Discord.Client();
 
-bot.on("ready", async () => {
-	console.log(`${bot.user.username} Online!`);
-	bot.user.setActivity("with my Owner", {type: "PLAYING"});
+client.on('ready',() => {
+  console.log('I am ready!');
 });
+
+client.on('message', message =>{
+  if (message.content == 'ping') {
+    message.reply('pong');
+  }
+});
+
+client.login(process.env.BOT_TOKEN);
