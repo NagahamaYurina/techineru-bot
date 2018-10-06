@@ -1,5 +1,6 @@
-const Discord - require{'discord.js'};
-const client - new Discord.Client();
+const Discord = require("discord.js");
+const bot = new Discord.Client({disableEveryone: true}); // botnya tidak akan bisa mention @everyone
+const config = require("./config.json"); // kita akan menaruh prefix dan token disini
 
 bot.on("ready", async () => {
 	console.log(`${bot.user.username} Online!`);
@@ -47,6 +48,10 @@ bot.on("message", async message => {
 
   if (cmd === `${prefix}hello`) { // bukan ping tapi halo :U
 		message.channel.send("Hello!");
-  }
+	}
 
-client.login(process.env.BOT_TOKEN);
+
+});
+
+bot.login(config.token);
+
