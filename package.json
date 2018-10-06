@@ -1,13 +1,14 @@
 {
-  "name": "Test",
-  "description": "Test",
-  "version": "0.0.0",
+  "name": "techineru",
+  "version": "1.0.0",
+  "description": "techineru discord bot",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "author": "nagayuri#8324",
+  "license": "ISC",
   "dependencies": {
-    "discord.js": "11.1.0",
-    "request": "2.81.0"
+    "discord.js": "^11.4.2"
   }
 }
